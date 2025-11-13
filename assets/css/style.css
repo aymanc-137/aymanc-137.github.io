@@ -227,7 +227,36 @@ main {
 
 .contact-item .icon {
   font-size: 1.5rem;
-  width: 1rem;
+  width: 2rem;
+}
+
+/* Contact Reveal Button */
+.reveal-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, var(--accent-color), var(--hover-color));
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+  margin-bottom: 2rem;
+}
+
+.reveal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+}
+
+.reveal-btn:active {
+  transform: translateY(0);
+}
+
+.contact-info.hidden {
+  display: none;
 }
 
 /* Contact Page Styles */
