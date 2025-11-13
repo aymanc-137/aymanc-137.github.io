@@ -29,7 +29,7 @@ Desktop.ini
 # Unused files
 propmpt.md
 AlwanPage.svelte
-themes/
+/themes/
 
 # Node modules (if any)
 node_modules/
