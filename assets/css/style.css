@@ -133,21 +133,38 @@ main {
   border-top: 1px solid #e0e0e0;
 }
 
-.contact-link {
-  display: inline-block;
-  color: var(--accent-color);
+.contact-footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
   text-decoration: none;
-  font-size: 1.1rem;
-  padding: 0.75rem 2rem;
-  border: 2px solid var(--accent-color);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 
-.contact-link:hover {
-  background-color: var(--accent-color);
-  color: white;
-  transform: translateY(-2px);
+.contact-item:hover {
+  color: var(--accent-color);
+  background-color: #f8f9fa;
+}
+
+.contact-item .icon {
+  font-size: 1.25rem;
 }
 
 /* Contact Page Styles */
@@ -229,6 +246,12 @@ main {
 
   .themes-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
   }
 
   .contact-container h1 {
