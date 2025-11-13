@@ -339,7 +339,7 @@ main {
 .gradient-line {
   background: linear-gradient(to left, #35A8DF, #94E2AC);
   height: 3px;
-  width: 100px;
+  width: 100%;
   margin: 1.5rem auto;
 }
 
