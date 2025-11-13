@@ -19,6 +19,47 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
   font-size: 18px;
+  position: relative;
+}
+
+/* Language Switcher */
+.language-switcher {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.lang-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.lang-link:hover {
+  background-color: #f8f9fa;
+  color: var(--accent-color);
+}
+
+.lang-link.active {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
 }
 
 main {
@@ -417,6 +458,17 @@ main {
 
   .contact-container h1 {
     font-size: 2rem;
+  }
+
+  .language-switcher {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem;
+  }
+
+  .lang-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
   }
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}en{% endif %}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,18 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+    {% for pg in pages %}
+      {% if pg.lang == 'en' %}
+        <a href="{{ pg.url }}" class="lang-link {% if page.lang == 'en' %}active{% endif %}" title="English">EN</a>
+      {% elsif pg.lang == 'ar' %}
+        <a href="{{ pg.url }}" class="lang-link {% if page.lang == 'ar' %}active{% endif %}" title="العربية">AR</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
   <main>
     {{ content }}
   </main>
