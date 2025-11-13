@@ -23,34 +23,114 @@ body {
 
 main {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 
 /* Home Page Styles */
 .home-container {
-  max-width: 600px;
-  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.intro h1 {
+/* Bio Header */
+.bio-header {
+  text-align: center;
+  padding: 3rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.bio-header h1 {
   font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
 }
 
-.tagline {
+.subtitle {
   font-size: 1.25rem;
   color: var(--muted-color);
-  margin-bottom: 4rem;
-  line-height: 1.8;
+  font-weight: 400;
 }
 
-.home-footer {
-  margin-top: 4rem;
+/* Bio Footer (Description) */
+.bio-footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+}
+
+.bio-footer p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Latest Themes Section */
+.latest-themes {
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.latest-themes h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.theme-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.theme-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.theme-card p {
+  color: var(--muted-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.theme-link {
+  display: inline-block;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.theme-link:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+/* Contact Footer */
+.contact-footer {
+  text-align: center;
+  padding: 3rem 0;
+  border-top: 1px solid #e0e0e0;
 }
 
 .contact-link {
@@ -131,12 +211,24 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .intro h1 {
+  .bio-header h1 {
     font-size: 2.25rem;
   }
 
-  .tagline {
+  .subtitle {
     font-size: 1.1rem;
+  }
+
+  .bio-footer p {
+    font-size: 1rem;
+  }
+
+  .latest-themes h2 {
+    font-size: 1.75rem;
+  }
+
+  .themes-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-container h1 {
@@ -149,11 +241,27 @@ main {
     font-size: 16px;
   }
 
-  .intro h1 {
+  main {
+    padding: 2rem 1rem;
+  }
+
+  .bio-header h1 {
     font-size: 1.75rem;
   }
 
-  .tagline {
+  .subtitle {
     font-size: 1rem;
+  }
+
+  .bio-footer p {
+    font-size: 0.95rem;
+  }
+
+  .latest-themes h2 {
+    font-size: 1.5rem;
+  }
+
+  .theme-card {
+    padding: 1.5rem;
   }
 }
