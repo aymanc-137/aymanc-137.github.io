@@ -1,0 +1,15 @@
+# Site settings
+title: Ayman Osman
+description: Building themes for ecommerce platforms, mainly Salla
+baseurl: ""
+url: "https://aymanc-137.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - propmpt.md
