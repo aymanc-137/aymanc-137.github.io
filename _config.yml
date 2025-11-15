@@ -5,8 +5,8 @@ baseurl: ""
 url: "https://aymanc-137.github.io"
 
 # Multi-language settings
-languages: ["en", "ar"]
-default_lang: en
+languages: ["ar", "en"]
+default_lang: ar
 exclude_from_localizations: ["assets"]
 
 # Build settings
