@@ -33,3 +33,5 @@ AlwanPage.svelte
 
 # Node modules (if any)
 node_modules/
+
++page.svelte
