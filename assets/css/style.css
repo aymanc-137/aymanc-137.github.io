@@ -476,6 +476,42 @@ main {
   text-align: center;
 }
 
+/* Section Navigation Grid */
+.section-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.section-nav-grid a {
+  display: block;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.section-nav-grid a:hover {
+  background: linear-gradient(135deg, #35A8DF, #94E2AC);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(53, 168, 223, 0.3);
+}
+
+@media (max-width: 768px) {
+  .section-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .bio-header h1 {
